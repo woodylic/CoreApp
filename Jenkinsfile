@@ -17,7 +17,7 @@ pipeline {
     stage('Unit Test') {
       steps {
         script {
-          sh "dotnet test CoreApp.sln --logger:xunit"
+          sh "dotnet test CoreApp.Tests/CoreApp.Tests.csproj --logger:xunit"
         }
       }
     }
