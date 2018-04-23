@@ -22,19 +22,23 @@ pipeline {
       }
     }
     stage('Publish Test Results') {
-      step([$class: 'XUnitPublisher', 
-        testTimeMargin: '3000', 
-        thresholdMode: 1, 
-        tools: [
-          [$class: 'XUnitDotNetTestType', 
-            deleteOutputFiles: false, 
-            failIfNotNew: true, 
-            pattern: '**/TestResults/TestResults.xml', 
-            skipNoTestFiles: false, 
-            stopProcessingIfError: true
-          ]
-        ]
-      ])
+      steps {
+        script {
+          step([$class: 'XUnitPublisher', 
+            testTimeMargin: '3000', 
+            thresholdMode: 1, 
+            tools: [
+              [$class: 'XUnitDotNetTestType', 
+                deleteOutputFiles: false, 
+                failIfNotNew: true, 
+                pattern: '**/TestResults/TestResults.xml', 
+                skipNoTestFiles: false, 
+                stopProcessingIfError: true
+              ]
+            ]
+          ])
+        }
+      }
     }
   }
 }
