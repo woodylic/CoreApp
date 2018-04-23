@@ -17,7 +17,13 @@ pipeline {
     stage('Unit Test') {
       steps {
         script {
-          sh "dotnet test CoreApp.sln --logger:xunit"
+          sh "dotnet test CoreApp.sln --logger:nunit"
+          step([$class: 'NUnitPublisher', 
+            testResultsPattern: '**\\TestResults\\TestResults.xml', 
+            debug: false, 
+            keepJUnitReports: true, 
+            skipJUnitArchiver:false, 
+            failIfNoResults: true])
         }
       }
     }
