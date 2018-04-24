@@ -49,3 +49,8 @@ pipeline {
     }
   }
 }
+
+
+dotnet ~/.nuget/packages/reportgenerator/4.0.0-alpha2/tools/ReportGenerator.dll 
+  "-reports:/Users/andre/Projects/ReportGenerator/src/Testprojects/CSharp/Reports/OpenCover.xml" 
+  "-targetdir:temp"

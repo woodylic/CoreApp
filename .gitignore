@@ -39,3 +39,4 @@ Thumbs.db
 *.dotCover
 
 .vscode/*
+.vs/*

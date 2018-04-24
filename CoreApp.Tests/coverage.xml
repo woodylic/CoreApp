@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<coverage line-rate="0.062" branch-rate="0.062" version="1.9" timestamp="1524547298" lines-covered="3" lines-valid="46" branches-covered="1" branches-valid="1">
+<coverage line-rate="0.062" branch-rate="0.062" version="1.9" timestamp="1524553520" lines-covered="3" lines-valid="46" branches-covered="1" branches-valid="1">
   <sources>
     <source>/Users/woodylic/Lab/CoreApp/CoreApp.Web/</source>
   </sources>
