@@ -62,9 +62,9 @@ pipeline {
         script {
           sh '''
           dotnet ~/.nuget/packages/reportgenerator/4.0.0-alpha3/tools/ReportGenerator.dll \
-            "-reports:**/TestResults/coverage.xml" \
-            "-sourcedirs:CoreApp.Tests" \
-            "-targetdir:artifacts/opencover"
+            \"-reports:**/TestResults/coverage.xml\"" \
+            \"-sourcedirs:CoreApp.Tests\" \
+            \"-targetdir:artifacts/opencover\"
           '''
         }
       }
