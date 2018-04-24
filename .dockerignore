@@ -38,4 +38,5 @@ Thumbs.db
 # dotCover
 *.dotCover
 
-.vscode/*
+.vscode/
+.vs/

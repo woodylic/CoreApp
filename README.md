@@ -40,7 +40,7 @@ dotnet test CoreApp.Tests/CoreApp.Tests.csproj \
   --no-restore \
   --no-build \
   /p:CollectCoverage=true \
-  /p:CoverletOutputFormat=opencover \
+  /p:CoverletOutputFormat=cobertura \
   /p:CoverletOutputDirectory=TestResults
 ```
 

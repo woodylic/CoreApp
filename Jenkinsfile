@@ -10,23 +10,26 @@ pipeline {
     stage('Build') {
       steps {
         script {
-          sh "dotnet restore && dotnet build CoreApp.sln -c Release"
+          sh "dotnet restore && dotnet build CoreApp.sln -c Debug"
         }
       }
     }
     stage('Unit Test') {
       steps {
         script {
-          sh "dotnet test CoreApp.Tests/CoreApp.Tests.csproj --logger:xunit --no-build --no-restore"
+          sh '''
+          dotnet test CoreApp.Tests/CoreApp.Tests.csproj \\
+            --no-build \\
+            --no-restore \\
+            --logger:xunit
+          '''
         }
       }
     }
     stage('Publish Test Results') {
       steps {
         script {
-          step([$class: 'XUnitPublisher', 
-            testTimeMargin: '3000', 
-            thresholdMode: 1, 
+          step([$class: 'XUnitPublisher',
             tools: [
               [$class: 'XUnitDotNetTestType', 
                 deleteOutputFiles: false, 
@@ -43,14 +46,28 @@ pipeline {
     stage('Code Coverage') {
       steps {
         script {
-          sh "dotnet test CoreApp.Tests/CoreApp.Tests.csproj --no-build --no-restore /p:CollectCoverage=true /p:CoverletOutputFormat=lcov"
+          sh '''
+          dotnet test CoreApp.Tests/CoreApp.Tests.csproj \\
+            --no-build \\
+            --no-restore \\
+            /p:CollectCoverage=true \\
+            /p:CoverletOutputFormat=cobertura \\
+            /p:CoverletOutputDirectory=TestResults
+          '''
+        }
+      }
+    }
+    stage('Generate Code Coverage Report') {
+      steps {
+        script {
+          sh '''
+          dotnet ~/.nuget/packages/reportgenerator/4.0.0-alpha3/tools/ReportGenerator.dll \
+            "-reports:**/TestResults/coverage.xml" \
+            "-sourcedirs:CoreApp.Tests" \
+            "-targetdir:artifacts/opencover"
+          '''
         }
       }
     }
   }
 }
-
-
-dotnet ~/.nuget/packages/reportgenerator/4.0.0-alpha2/tools/ReportGenerator.dll 
-  "-reports:/Users/andre/Projects/ReportGenerator/src/Testprojects/CSharp/Reports/OpenCover.xml" 
-  "-targetdir:temp"
