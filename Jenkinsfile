@@ -17,7 +17,7 @@ pipeline {
     stage('Unit Test') {
       steps {
         script {
-          sh "dotnet test CoreApp.Tests/CoreApp.Tests.csproj --logger:xunit"
+          sh "dotnet test CoreApp.Tests/CoreApp.Tests.csproj --logger:xunit --no-build --no-restore"
         }
       }
     }
@@ -37,6 +37,13 @@ pipeline {
               ]
             ]
           ])
+        }
+      }
+    }
+    stage('Code Coverage') {
+      steps {
+        script {
+          sh "dotnet test CoreApp.Tests/CoreApp.Tests.csproj --no-build --no-restore /p:CollectCoverage=true /p:CoverletOutputFormat=lcov"
         }
       }
     }
