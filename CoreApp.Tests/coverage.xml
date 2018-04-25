@@ -1,184 +1,64 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<coverage line-rate="0.062" branch-rate="0.062" version="1.9" timestamp="1524553520" lines-covered="3" lines-valid="46" branches-covered="1" branches-valid="1">
-  <sources>
-    <source>/Users/woodylic/Lab/CoreApp/CoreApp.Web/</source>
-  </sources>
-  <packages>
-    <package name="CoreApp.Web" line-rate="0.062" branch-rate="0.062" complexity="0">
-      <classes>
-        <class name="CoreApp.Web.Program" filename="Program.cs" line-rate="0" branch-rate="0" complexity="0">
-          <methods>
-            <method name="Main" signature="(System.String[])" line-rate="0" branch-rate="0">
-              <lines>
-                <line number="16" hits="0" branch="False" />
-                <line number="17" hits="0" branch="False" />
-                <line number="18" hits="0" branch="False" />
-              </lines>
-            </method>
-            <method name="BuildWebHost" signature="(System.String[])" line-rate="0" branch-rate="0">
-              <lines>
-                <line number="21" hits="0" branch="False" />
-                <line number="22" hits="0" branch="False" />
-                <line number="23" hits="0" branch="False" />
-              </lines>
-            </method>
-          </methods>
-          <lines>
-            <line number="16" hits="0" branch="False" />
-            <line number="17" hits="0" branch="False" />
-            <line number="18" hits="0" branch="False" />
-            <line number="21" hits="0" branch="False" />
-            <line number="22" hits="0" branch="False" />
-            <line number="23" hits="0" branch="False" />
-          </lines>
-        </class>
-        <class name="CoreApp.Web.Startup" filename="Startup.cs" line-rate="0" branch-rate="0" complexity="0">
-          <methods>
-            <method name=".ctor" signature="(Microsoft.Extensions.Configuration.IConfiguration)" line-rate="0" branch-rate="0">
-              <lines>
-                <line number="14" hits="0" branch="False" />
-                <line number="15" hits="0" branch="False" />
-                <line number="16" hits="0" branch="False" />
-                <line number="17" hits="0" branch="False" />
-              </lines>
-            </method>
-            <method name="get_Configuration" signature="()" line-rate="0" branch-rate="0">
-              <lines>
-                <line number="19" hits="0" branch="False" />
-              </lines>
-            </method>
-            <method name="ConfigureServices" signature="(Microsoft.Extensions.DependencyInjection.IServiceCollection)" line-rate="0" branch-rate="0">
-              <lines>
-                <line number="23" hits="0" branch="False" />
-                <line number="24" hits="0" branch="False" />
-                <line number="25" hits="0" branch="False" />
-              </lines>
-            </method>
-            <method name="Configure" signature="(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment)" line-rate="0" branch-rate="0">
-              <lines>
-                <line number="29" hits="0" branch="False" />
-                <line number="30" hits="0" branch="False" />
-                <line number="31" hits="0" branch="False" />
-                <line number="32" hits="0" branch="False" />
-                <line number="33" hits="0" branch="False" />
-                <line number="35" hits="0" branch="False" />
-                <line number="36" hits="0" branch="False" />
-                <line number="37" hits="0" branch="False" />
-                <line number="39" hits="0" branch="False" />
-                <line number="41" hits="0" branch="False" />
-                <line number="42" hits="0" branch="False" />
-                <line number="43" hits="0" branch="False" />
-                <line number="44" hits="0" branch="False" />
-                <line number="45" hits="0" branch="False" />
-                <line number="46" hits="0" branch="False" />
-                <line number="47" hits="0" branch="False" />
-              </lines>
-            </method>
-          </methods>
-          <lines>
-            <line number="14" hits="0" branch="False" />
-            <line number="15" hits="0" branch="False" />
-            <line number="16" hits="0" branch="False" />
-            <line number="17" hits="0" branch="False" />
-            <line number="19" hits="0" branch="False" />
-            <line number="23" hits="0" branch="False" />
-            <line number="24" hits="0" branch="False" />
-            <line number="25" hits="0" branch="False" />
-            <line number="29" hits="0" branch="False" />
-            <line number="30" hits="0" branch="False" />
-            <line number="31" hits="0" branch="False" />
-            <line number="32" hits="0" branch="False" />
-            <line number="33" hits="0" branch="False" />
-            <line number="35" hits="0" branch="False" />
-            <line number="36" hits="0" branch="False" />
-            <line number="37" hits="0" branch="False" />
-            <line number="39" hits="0" branch="False" />
-            <line number="41" hits="0" branch="False" />
-            <line number="42" hits="0" branch="False" />
-            <line number="43" hits="0" branch="False" />
-            <line number="44" hits="0" branch="False" />
-            <line number="45" hits="0" branch="False" />
-            <line number="46" hits="0" branch="False" />
-            <line number="47" hits="0" branch="False" />
-          </lines>
-        </class>
-        <class name="CoreApp.Web.Models.ErrorViewModel" filename="Models/ErrorViewModel.cs" line-rate="0" branch-rate="0" complexity="0">
-          <methods>
-            <method name="get_RequestId" signature="()" line-rate="0" branch-rate="0">
-              <lines>
-                <line number="7" hits="0" branch="False" />
-              </lines>
-            </method>
-            <method name="get_ShowRequestId" signature="()" line-rate="0" branch-rate="0">
-              <lines>
-                <line number="9" hits="0" branch="False" />
-              </lines>
-            </method>
-          </methods>
-          <lines>
-            <line number="7" hits="0" branch="False" />
-            <line number="9" hits="0" branch="False" />
-          </lines>
-        </class>
-        <class name="CoreApp.Web.Controllers.HomeController" filename="Controllers/HomeController.cs" line-rate="0.25" branch-rate="0.25" complexity="0">
-          <methods>
-            <method name="Index" signature="()" line-rate="1" branch-rate="1">
-              <lines>
-                <line number="14" hits="1" branch="False" />
-                <line number="15" hits="1" branch="False" />
-                <line number="16" hits="1" branch="True" condition-coverage="100% (1/1)">
-                  <conditions>
-                    <condition number="0" type="jump" coverage="100%" />
-                  </conditions>
-                </line>
-              </lines>
-            </method>
-            <method name="About" signature="()" line-rate="0" branch-rate="0">
-              <lines>
-                <line number="19" hits="0" branch="False" />
-                <line number="20" hits="0" branch="False" />
-                <line number="22" hits="0" branch="False" />
-                <line number="23" hits="0" branch="False" />
-              </lines>
-            </method>
-            <method name="Contact" signature="()" line-rate="0" branch-rate="0">
-              <lines>
-                <line number="26" hits="0" branch="False" />
-                <line number="27" hits="0" branch="False" />
-                <line number="29" hits="0" branch="False" />
-                <line number="30" hits="0" branch="False" />
-              </lines>
-            </method>
-            <method name="Error" signature="()" line-rate="0" branch-rate="0">
-              <lines>
-                <line number="33" hits="0" branch="False" />
-                <line number="34" hits="0" branch="False" />
-                <line number="35" hits="0" branch="False" />
-              </lines>
-            </method>
-          </methods>
-          <lines>
-            <line number="14" hits="1" branch="False" />
-            <line number="15" hits="1" branch="False" />
-            <line number="16" hits="1" branch="True" condition-coverage="100% (1/1)">
-              <conditions>
-                <condition number="0" type="jump" coverage="100%" />
-              </conditions>
-            </line>
-            <line number="19" hits="0" branch="False" />
-            <line number="20" hits="0" branch="False" />
-            <line number="22" hits="0" branch="False" />
-            <line number="23" hits="0" branch="False" />
-            <line number="26" hits="0" branch="False" />
-            <line number="27" hits="0" branch="False" />
-            <line number="29" hits="0" branch="False" />
-            <line number="30" hits="0" branch="False" />
-            <line number="33" hits="0" branch="False" />
-            <line number="34" hits="0" branch="False" />
-            <line number="35" hits="0" branch="False" />
-          </lines>
-        </class>
-      </classes>
-    </package>
-  </packages>
+﻿<?xml version="1.0"?>
+<coverage generated="1524553520">
+  <project timestamp="1524553520">
+    <file name="Program.cs">
+      <line type="stmt" num="16" count="0"/>
+      <line type="stmt" num="17" count="0"/>
+      <line type="stmt" num="18" count="0"/>
+      <line type="stmt" num="21" count="0"/>
+      <line type="stmt" num="22" count="0"/>
+      <line type="stmt" num="23" count="0"/>
+      <metrics ncloc="12" coveredelements="0" elements="12"/>
+    </file>
+    <file name="Startup.cs">
+      <line type="stmt" num="14" count="0"/>
+      <line type="stmt" num="15" count="0"/>
+      <line type="stmt" num="16" count="0"/>
+      <line type="stmt" num="17" count="0"/>
+      <line type="stmt" num="19" count="0"/>
+      <line type="stmt" num="23" count="0"/>
+      <line type="stmt" num="24" count="0"/>
+      <line type="stmt" num="25" count="0"/>
+      <line type="stmt" num="29" count="0"/>
+      <line type="stmt" num="30" count="0"/>
+      <line type="stmt" num="31" count="0"/>
+      <line type="stmt" num="32" count="0"/>
+      <line type="stmt" num="33" count="0"/>
+      <line type="stmt" num="35" count="0"/>
+      <line type="stmt" num="36" count="0"/>
+      <line type="stmt" num="37" count="0"/>
+      <line type="stmt" num="39" count="0"/>
+      <line type="stmt" num="41" count="0"/>
+      <line type="stmt" num="42" count="0"/>
+      <line type="stmt" num="43" count="0"/>
+      <line type="stmt" num="44" count="0"/>
+      <line type="stmt" num="45" count="0"/>
+      <line type="stmt" num="46" count="0"/>
+      <line type="stmt" num="47" count="0"/>
+      <metrics ncloc="48" coveredelements="0" elements="48"/>
+    </file>
+    <file name="Models/ErrorViewModel.cs">
+      <line type="stmt" num="7" count="0"/>
+      <line type="stmt" num="9" count="0"/>
+      <metrics ncloc="4" coveredelements="0" elements="4"/>
+    </file>
+    <file name="Controllers/HomeController.cs">
+      <line type="stmt" num="14" count="1"/>
+      <line type="stmt" num="15" count="1"/>
+      <line type="stmt" num="16" count="1"/>
+      <line type="stmt" num="19" count="0"/>
+      <line type="stmt" num="20" count="0"/>
+      <line type="stmt" num="22" count="0"/>
+      <line type="stmt" num="23" count="0"/>
+      <line type="stmt" num="26" count="0"/>
+      <line type="stmt" num="27" count="0"/>
+      <line type="stmt" num="29" count="0"/>
+      <line type="stmt" num="30" count="0"/>
+      <line type="stmt" num="33" count="0"/>
+      <line type="stmt" num="34" count="0"/>
+      <line type="stmt" num="35" count="0"/>
+      <metrics ncloc="28" coveredelements="6" elements="28"/>
+    </file>
+    <metrics ncloc="92" coveredelements="6" elements="92"/>
+  </project>
 </coverage>
