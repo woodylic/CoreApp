@@ -4,7 +4,8 @@
 [Oo]bj/
 [Bb]in/
 packages/
-# TestResults/
+TestResults/
+artifacts/
 
 # globs
 Makefile.in

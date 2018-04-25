@@ -64,8 +64,22 @@ pipeline {
           dotnet ~/.nuget/packages/reportgenerator/4.0.0-alpha3/tools/ReportGenerator.dll \
             \"-reports:**/TestResults/coverage.xml\"" \
             \"-sourcedirs:CoreApp.Tests\" \
-            \"-targetdir:artifacts/opencover\"
+            \"-targetdir:artifacts/coverage\"
           '''
+        }
+      }
+    }
+    stage('Publish Code Coverage Report') {
+      steps {
+        script {
+          publishHTML (target: [
+            allowMissing: false,
+            alwaysLinkToLastBuild: false,
+            keepAll: true,
+            reportDir: 'artifacts/coverage',
+            reportFiles: 'index.htm',
+            reportName: "Code Coverage Details"
+          ])
         }
       }
     }
