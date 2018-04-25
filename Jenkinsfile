@@ -61,9 +61,9 @@ pipeline {
       steps {
         script {
           sh '''
-          dotnet ~/.nuget/packages/reportgenerator/4.0.0-alpha3/tools/ReportGenerator.dll \
-            \"-reports:**/TestResults/coverage.xml\"" \
-            \"-sourcedirs:CoreApp.Tests\" \
+          dotnet ~/.nuget/packages/reportgenerator/4.0.0-alpha3/tools/ReportGenerator.dll \\
+            \"-reports:**/TestResults/coverage.xml\" \\
+            \"-sourcedirs:CoreApp.Tests\" \\
             \"-targetdir:artifacts/coverage\"
           '''
         }
@@ -78,7 +78,7 @@ pipeline {
             keepAll: true,
             reportDir: 'artifacts/coverage',
             reportFiles: 'index.htm',
-            reportName: "Code Coverage Details"
+            reportName: 'Code Coverage Details'
           ])
         }
       }
